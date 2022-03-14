@@ -1,8 +1,14 @@
 header {
     background-color: rgb(243, 191, 77);
+    padding: 10px;
     display: flex;
     justify-content: space-between;
 }
 input {
     min-width: 300px;
+    border-radius: 10px;
+}
+header p {
+    font-weight: bold;
+    font-family: verdana;
 }
