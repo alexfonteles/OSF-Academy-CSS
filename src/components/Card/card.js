@@ -1,6 +1,6 @@
 import './card.css'
 
-import Violino from '/Users/alex_/osf-academy-css/OSF-Academy-CSS/src/assets/images/violino.png'
+import Violino from './violino.png'
 
 
 function Card() {
