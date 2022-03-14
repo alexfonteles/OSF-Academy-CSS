@@ -71,7 +71,7 @@ function Sidebar() {
             <li>Cabo</li>
             <li>Periféricos</li>
         </ul>
-        <h3>Ver mais</h3>        
+        <h3 className='mais'>Ver mais</h3>        
     </div>
 };
 

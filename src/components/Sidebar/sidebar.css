@@ -1,5 +1,19 @@
 .sidebar {
-    background-color: #fff;
-    width: 250px;
+    background-color: #bebdb8;
+    width: 300px;
     padding-left: 10px;
+}
+h3{
+    color: #613613;
+    font-family: verdana;
+    margin: 5px 0;
+    margin-top: 15px;
+}
+.sidebar li {
+    color: #000000;
+    font-family: verdana;
+    font-weight: 500;
+}
+.mais {
+    color: #ed2939;
 }

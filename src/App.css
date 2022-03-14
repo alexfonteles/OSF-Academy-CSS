@@ -4,9 +4,15 @@
 }
 
 body {
-  background-color: gray;
+  background-color: #d9dddc;
 }
 
 .App .corpo {
   display: flex;
+}
+
+.corpo .box-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

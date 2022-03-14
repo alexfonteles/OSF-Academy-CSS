@@ -11,7 +11,11 @@ function App() {
     <Header />
     <div className='corpo'>
       <Sidebar />
-      <Card />        
+      <div className='box-card'>
+      <Card /> 
+      <Card /> 
+      <Card /> 
+      </div>      
     </div>
 
     <Homepage />
