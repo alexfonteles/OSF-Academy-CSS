@@ -1,5 +1,6 @@
 header {
-    background-color: #000000;
+    background-image: url(/src/assets/images/partidura.jpg);
+    background-size: contain;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -10,8 +11,10 @@ input {
     height: 25px;
 }
 header p {
+    background-color: #000000;
+    padding: 1px 8px;
     font-weight: bold;
     font-family: verdana;
     font-size: 25px;
-    color: #fff;
+    color: #BEBDB8;
 }

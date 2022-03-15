@@ -13,8 +13,7 @@ function App() {
       <Sidebar />
       <div className='box-card'>
       <Card /> 
-      <Card /> 
-      <Card /> 
+
       </div>      
     </div>
 

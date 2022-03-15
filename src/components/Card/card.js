@@ -1,6 +1,6 @@
 import './card.css'
 
-import Violino from './violino.png'
+import Violino from '../../assets/images/violino.jpg'
 
 
 function Card() {
