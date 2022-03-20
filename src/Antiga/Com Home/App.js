@@ -1,15 +1,15 @@
-import './App.css';
-import React, {useState} from 'react'
+import './App.css'
 
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import Dadosdoproduto from "./mocks/produtos.json";
+import Header from './components/Header'
+import produtosData from "./mocks/produtos.json"
+
+import Sidebar from './components/Sidebar'
+import Homepage from './components/HomePage'
 import CardList from './components/CardList/cardlist'
 
 
 function App() {
-  const [produtos, setProdutos] = useState(Dadosdoproduto);
-
+  const [produtos, setprodutos] = usestate(produtosData)
   return <div className='App'>
     <Header />
     <div className='corpo'>
@@ -19,6 +19,8 @@ function App() {
 
       </div>      
     </div>
+
+    <Homepage />
 
   </div>
 
