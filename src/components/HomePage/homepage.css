@@ -1,0 +1,10 @@
+.homepage {
+    background-image: url(/src/assets/images/background10.webp);
+    display: flex;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
