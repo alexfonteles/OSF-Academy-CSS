@@ -1,10 +1,10 @@
 [
-    {
+   {
         "id": 1,
         "nome": "Violino",
         "descricao": "Descrição do violino",
         "preco": "R$ 699,00",
-        "image": "../assets/images/violino.webp",
+        "imagem": "/images/violino.webp",
         "categorias": ["instrumentos-corda", "Violino"]
     },
     {
@@ -12,7 +12,7 @@
         "nome": "Teclado",
         "descricao": "Descrição do teclado.",
         "preco": "R$ 699,00",
-        "image": "../assets/images/violino.webp",
+        "imagem": "/images/violino.webp",
         "categorias": ["instrumentos-tecla", "teclado"]
     },
     {
@@ -20,7 +20,7 @@
         "nome": "Bateria",
         "descricao": "Descrição da bateria.",
         "preco": "R$ 699,00",
-        "image": "../assets/images/violino.webp",
+        "imagem": "/images/violino.webp",
         "categorias": ["instrumentos-percussao ", "Bateria"]
     },
     {
@@ -28,7 +28,7 @@
         "nome": "TESTE",
         "descricao": "TESTE",
         "preco":"R$ 699,00",
-        "image":"../assets/images/violino.webp",
+        "imagem":"/images/violino.webp",
         "categorias": ["teste1", "teste2"]
    },
    {
@@ -36,16 +36,8 @@
     "nome": "Violino",
     "descricao": "Descrição do violino",
     "preco": "R$ 699,00",
-    "image": "../assets/images/violino.webp",
+    "imagem": "/images/violino.webp",
     "categorias": ["instrumentos-corda", "Violino"]
-},
-{
-    "id": 6,
-    "nome": "Teclado",
-    "descricao": "Descrição do teclado.",
-    "preco": "R$ 699,00",
-    "image": "../assets/images/violino.webp",
-    "categorias": ["instrumentos-tecla", "teclado"]
-}
+    }
 
 ]
