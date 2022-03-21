@@ -1,14 +1,16 @@
 import './card.css'
 
-import Violino from '../../assets/images/violino.webp'
 
-
-function Card() {
+function Card({name, description, price, imagem, alte}) {
     return <div className='card'>
-        <img src={Violino} alt='violino'/>
-        <h2>Violino Vivace Mozart Mo44 4/4</h2>
-        <h4>Descrição:</h4>
-        <p className='descricao'>O Violino Vivace série Mozart é um violino clássico construído para oferecer uma experiência única. Este modelo é construído com tampo de Spruce selecionado, lateral e fundo de Maple trabalhado lhe conferem um belíssimo visual e uma sonoridade impressionante, acompanha arco de crina animal. Para conservar e prolongar sua vida útil, o Mozart é acompanhado de um luxuoso estojo que lhe garante um perfeito acondicionamento.</p>
+        <img src={imagem} alt={alte}/>
+        <h2>{name}</h2>
+        <p className='descricao'>{description}</p>
+        <div className='compra'>
+        <p><span>{price}</span></p>
+        <button>Comprar</button>
+        </div>
+
     </div>
 };
 

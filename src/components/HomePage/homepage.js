@@ -6,14 +6,17 @@ import Dadosdoproduto from '../../mocks/produtos.json';
 import CardList from '../CardList/cardlist';
 
 function Homepage() {
-    const [produtos, setProdutos] = useState(Dadosdoproduto);
+    const [produtos, setprodutos] = useState(Dadosdoproduto);
+   
+    const [busca, setBusca] = useState('');
+    const produtosFiltrados = produtos.filter((produto) => produto.nome.includes(busca))
 
     return (
         <>
     <div className='homepage'>        
         <Sidebar />
         <div className='cards'>
-            <CardList produtos={produtos} />
+        <CardList produtos={produtosFiltrados} /> 
         </div>                     
     </div>
     </>
