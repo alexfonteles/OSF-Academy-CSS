@@ -6,3 +6,12 @@
 body {
   background-color: #d9dddc;
 }
+
+.corpo {
+  background-image: url(/src/assets/images/background10.webp);
+  display: flex;
+}
+.box-card {
+  display: flex;
+  flex-wrap: wrap;
+}
