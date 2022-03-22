@@ -1,6 +1,5 @@
 import './App.css';
 import React, {useState} from 'react';
-import Context from './Context';
 
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
@@ -26,11 +25,6 @@ function App() {
     </div>
 
   </div>);
-(<Context.Provider>
-  <div>
-    <p> DevMedia Context API</p>
-  </div>
-</Context.Provider>);
 };
 
 export default App;
