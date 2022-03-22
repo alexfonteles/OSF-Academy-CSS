@@ -1,18 +1,11 @@
 import './sidebar.css'
 
 function Sidebar() {
-    
+    console.log("renderizei")
     return <div className='sidebar'>
         <h3>Instrumentos de Corda</h3>
         <ul>
-            <li>Violão</li>
-            <li>Ukulele</li>
-            <li>Guitarra</li>
-            <li>Viola caipira</li>
-            <li>Contrabaixo</li>
-            <li>Cavaco</li>
-            <li>Bandolim e Banjo</li>
-            <li>Encordoamento</li>
+            <li>Violão<input type="checkbox" id='1' name='Violão' value={1} /></li>
         </ul>
         <h3>Instrumentos de teclas</h3>
         <ul>
