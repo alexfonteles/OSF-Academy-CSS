@@ -1,20 +1,30 @@
-header {
-    background-image: url(/src/assets/images/partidura.webp);
-    background-size: contain;
+.cabecalho {
+    background-color: #000;
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
 }
-input {
+.cabecalho input {
     min-width: 300px;
     border-radius: 10px;
     height: 25px;
 }
-header p {
+.cabecalho p {
     background-color: #000000;
     padding: 1px 8px;
     font-weight: bold;
     font-family: verdana;
     font-size: 25px;
     color: #BEBDB8;
+}
+.cabecalho a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+.cart {
+    color: #fff;
 }

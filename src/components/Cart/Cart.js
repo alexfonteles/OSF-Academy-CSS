@@ -1,0 +1,11 @@
+import './Cart.css';
+
+function Cart() {
+    
+    return(
+    <div>CartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCartCart
+    </div>
+    )
+}
+
+export default Cart;

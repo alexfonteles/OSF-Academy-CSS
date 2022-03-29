@@ -1,20 +1,31 @@
-import './homepage.css';
+import React, {useState} from 'react';
+
 import Sidebar from '../Sidebar';
+import Header from '../Header'
+import Dadosdoproduto from "../../mocks/produtos.json";
+import CardList from '../CardList';
 
-import CardList from '../CardList/cardlist';
 
-function Homepage() {
 
-    return (
-        <>
-    <div className='homepage'>        
-        <Sidebar />
-        <div className='cards'>
-        <CardList /> 
-        </div>                     
-    </div>
-    </>
-    );
-}
+function HomePage() {
+  const [produtos] = useState(Dadosdoproduto);
 
-export default Homepage;
+  const [busca, setBusca] = useState('');
+  const produtosFiltrados = produtos.filter((produto) => produto.nome.toLowerCase().includes(busca.toLowerCase()));
+
+    return ( 
+          <div className='App'>
+        <Header />
+        
+        <div className='corpo'>
+          <Sidebar busca={busca} setBusca={setBusca} /> 
+          <div className='box-card'>
+          <CardList produtos={produtosFiltrados} />
+    
+          </div>
+        </div>
+      </div>
+      );
+    };
+
+export default HomePage;
