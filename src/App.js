@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import CartContextProvider from './components/Context/CartContextProvider'
 
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
@@ -19,6 +20,7 @@ function App() {
   return (
    
   <div className='App'>
+    <CartContextProvider>
     <Router>
     <Header busca={busca} setBusca={setBusca}/>
     <div className='corpo'>
@@ -31,6 +33,7 @@ function App() {
     </div>
     </div>
     </Router>
+    </CartContextProvider>
   </div>
   
   );
