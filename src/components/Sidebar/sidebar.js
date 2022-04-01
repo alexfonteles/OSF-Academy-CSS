@@ -1,11 +1,12 @@
 import './sidebar.css'
 
-function Sidebar() {
-    console.log("renderizei")
+function Sidebar({busca, setBusca}) {
+    
     return <div className='sidebar'>
         <h3>Instrumentos de Corda</h3>
         <ul>
-            <li>Violão</li>
+            <li>Violão <input type="checkbox" value={busca} 
+    onChange={(e) => setBusca(e.target.value)} /></li>
         </ul>
         <h3>Instrumentos de teclas</h3>
         <ul>

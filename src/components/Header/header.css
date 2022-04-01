@@ -28,3 +28,7 @@
 .cart {
     color: #fff;
 }
+
+@media screen and (max-width:360) {
+
+}

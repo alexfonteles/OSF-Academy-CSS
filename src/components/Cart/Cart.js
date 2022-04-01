@@ -3,11 +3,12 @@ import {useCartContext} from '../Context/CartContextProvider'
 import CardList from '../CardList/cardlist';
 
 const Cart = () => {
-    const {cart} = useCartContext();
+    const {cart, emptyCart} = useCartContext();
     console.log(cart)
     
     return <div>
-        <h1>Excluir</h1>
+        <button className='esvaziar' onClick={() =>
+          emptyCart({ })}>Esvaziar carrinho</button>
         <CardList produtos={cart} />;
         </div>
 }
