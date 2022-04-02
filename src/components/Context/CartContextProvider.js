@@ -8,10 +8,12 @@ const CartContextProvider = ({children}) => {
 
     const addProduct = (product) => setCart((prev) => [...prev, product]);
 
-    const emptyCart = () => setCart()
+    const emptyCart = () => setCart([])
+
+    const handleRemoveProduct = () => setCart()
 
     return (
-    <Context.Provider value={{cart, addProduct, emptyCart}}>{children}</Context.Provider>
+    <Context.Provider value={{cart, addProduct, emptyCart, handleRemoveProduct}}>{children}</Context.Provider>
     );
 };
 

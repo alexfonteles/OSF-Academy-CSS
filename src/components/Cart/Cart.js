@@ -8,8 +8,11 @@ const Cart = () => {
     
     return <div>
         <button className='esvaziar' onClick={() =>
-          emptyCart({ })}>Esvaziar carrinho</button>
-        <CardList produtos={cart} />;
+          emptyCart()}>Esvaziar carrinho</button>
+        <CardList produtos={cart} />
+        {CardList.length === 0 && (
+          <div>No itens</div>
+        )}*/
         </div>
 }
 
