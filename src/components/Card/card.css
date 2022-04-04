@@ -40,8 +40,11 @@ p span {
     justify-content: center;
     align-items: center;
 }
+.button{
+    font-size: 30px;
+}
 button{
-    width: 200px;
+    width: 100px;
     margin-top: 20px;
     border-radius: 20px;
     padding: 20px;
@@ -49,7 +52,7 @@ button{
     background-color: #BEBDB8;
 }
 button:hover{
-    width: 250px;
+    width: 150px;
     height: 80px;
     margin-top: 20px;
     border-radius: 20px;

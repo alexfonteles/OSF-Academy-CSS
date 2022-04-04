@@ -20,20 +20,23 @@ function App() {
   return (
    
   <div className='App'>
-    <CartContextProvider>
+    
     <Router>
     <Header busca={busca} setBusca={setBusca}/>
     <div className='corpo'>
     <Sidebar />
+    <CartContextProvider>
     <div className='box-card'>
     <Routes>
     <Route path="/" element={ <CardList produtos={produtosFiltrados} /> } />
     <Route path="/cart" element={ <Cart /> } />
     </Routes>
     </div>
-    </div>
-    </Router>
     </CartContextProvider>
+    </div>
+    
+    </Router>
+    
   </div>
   
   );

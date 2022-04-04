@@ -1,53 +1,53 @@
 [
    {
-        "id": 1,
+        "id": "1",
         "nome": "Violão Strinberg SD200C Folk com Afinador - Mahogany",
         "descricao": "O modelo SD200C é um ótimo exemplo do que essa nova série tem a oferecer: através de sua captação SE-50 e suas madeiras de qualidade, o violão tem um som limpo e agradável até para os ouvidos mais apurados. O modelo SD200C conta com seu corpo em Sapele e tampo em Spruce, oferecendo ao violonista um tom brilhante e com agudos limpos, sem prejudicar os graves naturais provenientes do tampo laminado e das suas cordas de calibre.011.",
-        "preco": "R$ 1.175,00",
+        "preco": 1175.00,
         "imagem": "/images/violao.webp",
         "alte": "violão",
         "categorias": ["instrumentos corda", "Violão"]
     },
     {
-        "id": 2,
+        "id": "2",
         "nome": "Teclado Arranjador Revas KB330",
         "descricao": "O REVAS KB-330 é uma excelente opção para quem está procurando um teclado eletrônico básico mas com ótimo som, são 390 sons que abrangem uma extensa gama de instrumentos e recurso de acompanhamento inteligente de 100 estilos musicais... O teclado REVAS é indicado tanto para iniciantes e estudantes como para músicos experientes em uma gig que necessite do básico e prático, tornando-o excelente custo-benefício.",
-        "preco": "R$ 1.660,00",
+        "preco": 1660.00,
         "imagem": "/images/teclado.webp",
         "categorias": ["instrumentos tecla", "teclado"]
     },
     {
-        "id": 3,
+        "id": "3",
         "nome": "Bateria Nagano Onix Smart 22 - Deep Silver",
         "descricao": "A Onix Smart é composta por um Bumbo (22”x16”), uma Caixa (14”x5,5”), um Surdo (16”x16”) e dois Tons (10''x 08'' e 12'' x 09”). Seus cascos são confeccionados em Poplar, o material mais tradicional na fabricação de baterias, são escolhidos especialmente pela baixa densidade, equilíbrio sonoro e resposta aos ataques que garantem ao baterista.",
-        "preco": "R$ 3.514,00",
+        "preco": 3514.00,
         "imagem": "/images/bateria.webp",
         "alte": "violão",
         "categorias": ["instrumentos percussao ", "Bateria"]
     },
     {
-        "id": 4,
+        "id": "4",
         "nome": "Sax Tenor Michael WTSM49",
         "descricao": "O Sax Michael WTSM49 oferece recursos importantes para valorizar ainda mais sua musicalidade.Um deles são as barras estabilizadoras auxiliares de Fá (Fá), C (dó) grave e chave de B(Si) grave que vedam as sapatilhas com mais qualidade.",
-        "preco":"R$ 4.223,00",
+        "preco": 4223.00,
         "imagem":"/images/sax.webp",
         "alte": "violão",
         "categorias": ["instrumentos sopro", "Saxfone"]
     },
     {
-        "id": 5,
+        "id": "5",
         "nome": "Caixa Amplificada Oneal OCM2910 Bluetooth 120Wrms",
         "descricao": "Os produtos da Oneal são desenvolvidos para atender usuários altamente exigentes, dispomos do que há de melhor em avanço tecnológico, qualidade, confiabilidade, resistência, sonoridade e um excelente custo benefício que é característico da marca.",
-        "preco":"R$ 664,16",
+        "preco": 664.16,
         "imagem":"/images/som.webp",
         "alte": "violão",
         "categorias": ["Áudio", "Caixa de som"]
     },
     {
-        "id": 6,
+        "id": "6",
         "nome": "Mesa Controladora MDX Spectrum HP5001",
         "descricao": "Mesa Controladora MDX Spectrum HP5001",
-        "preco":"R$ 541,80",
+        "preco": 541.80,
         "imagem":"/images/mesa.webp",
         "alte": "violão",
         "categorias": ["Acessórios", "máquina de fumaça"]

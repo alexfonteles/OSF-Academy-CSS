@@ -1,7 +1,9 @@
 import './card.css'
 import { useCartContext } from "../Context/CartContextProvider"
+
 function Card({id, name, description, price, imagem, alte}) {
-    const {addProduct} = useCartContext();
+    const {cart, adicionarProduto, removerProduto} = useCartContext();
+    const produtoNoCarrinho = cart.find(produto => produto.id === id);
 
     return <div className='card'>
         <img src={imagem} alt={alte}/>
@@ -10,16 +12,12 @@ function Card({id, name, description, price, imagem, alte}) {
        
     <div className='compra'>
         <p><span>{price}</span></p>
-        <button onClick={() =>
-          addProduct({
-            id,
-            nome: name,
-            descricao: description,
-            imagem: imagem,
-            preco: price,
-        })
-    }
-            >Comprar</button>
+    <div className='button'>
+        <button onClick={() => adicionarProduto({name, imagem, id, price})}
+        >+</button>
+        {produtoNoCarrinho?.quantidade || 0}
+        <button onClick={() => removerProduto(id)}>-</button>
+    </div>
     </div>
 
     </div>

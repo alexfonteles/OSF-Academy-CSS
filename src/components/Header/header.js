@@ -9,7 +9,7 @@ function Header ({busca, setBusca}) {
     <input placeholder=" Qual instrumento você quer tocar?" 
     value={busca} 
     onChange={(e) => setBusca(e.target.value)}/>
-    <Link to="/cart" className='cart'><i class='fas fa-shopping-cart' /></Link>
+    <Link to="/cart" className='cart'><i className='fas fa-shopping-cart' /></Link>
     </div>;
 };
 
