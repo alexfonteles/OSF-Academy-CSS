@@ -4,16 +4,27 @@ import CardList from '../CardList/cardlist';
 
 const Cart = () => {
     const {cart, emptyCart} = useCartContext();
-    console.log(cart)
-    
-    return <div>
-        <button className='esvaziar' onClick={() =>
-          emptyCart()}>Esvaziar carrinho</button>
-        <CardList produtos={cart} />
-        {CardList.length === 0 && (
-          <div>No itens</div>
-        )}*/
-        </div>
+    const saldo=2000
+
+    return(
+          <div className='cart'>
+              <div className='checklist'>
+                      <h2>Checklist</h2>
+                      <h3>Saldo: R${saldo},00 </h3>
+                      <h3>Total: </h3>
+                      <h3>Saldo restante: R${saldo},00 </h3>
+          <div>
+            <button className='finalizar'>Finalizar compra</button>
+            <button className='esvaziar' onClick={() =>
+                    emptyCart()}>Esvaziar carrinho</button>
+          </div>
+              </div>
+              <div className='carrinho'>
+                  <CardList produtos={cart} />
+              </div>
+
+          </div>
+    )
 }
 
 export default Cart;

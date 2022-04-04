@@ -1,25 +1,28 @@
 import './card.css'
 import { useCartContext } from "../Context/CartContextProvider"
-function Card({id, name, description, price, imagem, alte}) {
-    const {addProduct} = useCartContext();
+function Card({name, description, price, imagem, alte, estoque}) {
+    const {addProduto} = useCartContext();
 
     return <div className='card'>
         <img src={imagem} alt={alte}/>
         <h2>{name}</h2>
         <p className='descricao'>{description}</p>
+        <p className='header-estoque'>Estoque: <span className='estoque'>{estoque}</span></p>
        
     <div className='compra'>
         <p><span>{price}</span></p>
-        <button onClick={() =>
-          addProduct({
-            id,
+    <div className='button'>
+    <button onClick={() => addProduto(name, imagem, price)
+         /* onAdd({
             nome: name,
-            descricao: description,
             imagem: imagem,
             preco: price,
-        })
+            estoque: estoque
+        })*/
     }
-            >Comprar</button>
+            >+</button>
+        <button>-</button>
+    </div>
     </div>
 
     </div>

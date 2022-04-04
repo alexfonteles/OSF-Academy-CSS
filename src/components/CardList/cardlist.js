@@ -10,7 +10,8 @@ const CardList = ({produtos}) => {
             description={produto.descricao}
             price={produto.preco}
             imagem={produto.imagem}
-
+            categoria={produto.categoria}
+            estoque={produto.estoque}
         />
     ));
 

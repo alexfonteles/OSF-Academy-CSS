@@ -1,31 +1,24 @@
-import React, {useState} from 'react';
-
+//import React, {useState} from 'react';
+import './homepage.css'
+import Produto from '../Produto';
+import produtos from '../../mocks/produtos.json'
 import Sidebar from '../Sidebar';
-import Header from '../Header'
-import Dadosdoproduto from "../../mocks/produtos.json";
-import CardList from '../CardList';
-
 
 
 function HomePage() {
-  const [produtos] = useState(Dadosdoproduto);
-
-  const [busca, setBusca] = useState('');
-  const produtosFiltrados = produtos.filter((produto) => produto.nome.toLowerCase().includes(busca.toLowerCase()));
-
-    return ( 
-          <div className='App'>
-        <Header />
-        
-        <div className='corpo'>
-          <Sidebar busca={busca} setBusca={setBusca} /> 
-          <div className='box-card'>
-          <CardList produtos={produtosFiltrados} />
-    
-          </div>
-        </div>
-      </div>
-      );
-    };
+  return (
+    <div className='home-page'>
+      <Sidebar />      
+      <ul className='box-card'>
+        <li>
+          {produtos.map(produto => (
+          <Produto 
+          {...produto} 
+          key={produto.id} />))}          
+        </li>
+      </ul>
+    </div>
+)
+};
 
 export default HomePage;

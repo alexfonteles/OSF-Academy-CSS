@@ -1,10 +1,14 @@
-.homepage {
-    background-image: url(/src/assets/images/background10.webp);
+.home-page{
     display: flex;
 }
 
-.cards {
+.box-card li{
+    background-color: rgb(154, 154, 212);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    
+}
+
+.image{
+    background-image: url(/src/assets/images/background10.webp);
 }

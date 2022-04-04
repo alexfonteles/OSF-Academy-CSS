@@ -6,7 +6,8 @@
         "preco": "R$ 1.175,00",
         "imagem": "/images/violao.webp",
         "alte": "violão",
-        "categorias": ["instrumentos corda", "Violão"]
+        "categoria": ["instrumentos corda", "Violão"],
+        "estoque": [10]
     },
     {
         "id": 2,
@@ -14,7 +15,8 @@
         "descricao": "O REVAS KB-330 é uma excelente opção para quem está procurando um teclado eletrônico básico mas com ótimo som, são 390 sons que abrangem uma extensa gama de instrumentos e recurso de acompanhamento inteligente de 100 estilos musicais... O teclado REVAS é indicado tanto para iniciantes e estudantes como para músicos experientes em uma gig que necessite do básico e prático, tornando-o excelente custo-benefício.",
         "preco": "R$ 1.660,00",
         "imagem": "/images/teclado.webp",
-        "categorias": ["instrumentos tecla", "teclado"]
+        "categoria": ["instrumentos tecla", "teclado"],
+        "estoque": [5]
     },
     {
         "id": 3,
@@ -23,7 +25,8 @@
         "preco": "R$ 3.514,00",
         "imagem": "/images/bateria.webp",
         "alte": "violão",
-        "categorias": ["instrumentos percussao ", "Bateria"]
+        "categoria": ["instrumentos percussao ", "Bateria"],
+        "estoque": [3]
     },
     {
         "id": 4,
@@ -32,7 +35,8 @@
         "preco":"R$ 4.223,00",
         "imagem":"/images/sax.webp",
         "alte": "violão",
-        "categorias": ["instrumentos sopro", "Saxfone"]
+        "categoria": ["instrumentos sopro", "Saxfone"],
+        "estoque": [20]
     },
     {
         "id": 5,
@@ -41,7 +45,8 @@
         "preco":"R$ 664,16",
         "imagem":"/images/som.webp",
         "alte": "violão",
-        "categorias": ["Áudio", "Caixa de som"]
+        "categoria": ["Áudio", "Caixa de som"],
+        "estoque": [15]
     },
     {
         "id": 6,
@@ -50,7 +55,8 @@
         "preco":"R$ 541,80",
         "imagem":"/images/mesa.webp",
         "alte": "violão",
-        "categorias": ["Acessórios", "máquina de fumaça"]
+        "categoria": ["Acessórios", "máquina de fumaça"],
+        "estoque": [30]
     }
     
 ]
