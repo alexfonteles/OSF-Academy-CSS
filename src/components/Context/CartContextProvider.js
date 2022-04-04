@@ -1,14 +1,10 @@
 import React, { useContext, useState } from "react";
-import Dadosdoproduto from "../../mocks/produtos.json";
 
 
 const Context = React.createContext();
 
 const CartContextProvider = ({children}) => {
-    const [cart, setCart, busca, setBusca] = useState([]);
-
-    const [produtos] = useState(Dadosdoproduto);
-    const produtosFiltrados = produtos.filter((produto) => produto.nome.toLowerCase().includes(busca.toLowerCase()));
+    const [cart, setCart] = useState([]);
 
     const onAdd = (product) => setCart((prev) => [...prev, product]);
 
@@ -17,7 +13,7 @@ const CartContextProvider = ({children}) => {
     const onRemove = () => setCart()
 
     return (
-    <Context.Provider value={{cart, onAdd, emptyCart, onRemove, produtosFiltrados, busca, setBusca, produtos, Dadosdoproduto}}>{children}</Context.Provider>
+    <Context.Provider value={{cart, onAdd, emptyCart, onRemove}}>{children}</Context.Provider>
     );
 };
 
