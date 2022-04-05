@@ -3,11 +3,13 @@ import {useCartContext} from '../Context/CartContextProvider'
 import CardList from '../CardList/cardlist';
 
 const Cart = () => {
-    const {cart, valorTotal} = useCartContext();
+    const {cart, valorTotal, efetuarCompra, mensagem} = useCartContext();
     
     return <div className='display'>
             <h2>Total no Carrinho: <span>R$ {valorTotal.toFixed(2)}</span> </h2>
-        
+            <div className='finalizar'>
+            <button onClick={() => {efetuarCompra(); mensagem()}}>Finalizar compra</button>
+            </div>
           <div className='cart'>
         <CardList produtos={cart} />
         </div>
@@ -15,4 +17,4 @@ const Cart = () => {
         </div>
 }
 
-export default Cart;
+export default Cart; 

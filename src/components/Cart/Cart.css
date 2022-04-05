@@ -7,7 +7,16 @@
     color:#BEBDB8
     
 }
-
+.finalizar button {
+        width: 300px;
+        background-color: rgb(140, 182, 136);
+        color: azure;
+}
+.finalizar button:hover {
+    width: 300px;
+    background-color: rgb(106, 130, 104);
+    color: azure;
+}
 .esvaziar {
     background-color: rgb(234, 53, 53);
     font-size: 17px;

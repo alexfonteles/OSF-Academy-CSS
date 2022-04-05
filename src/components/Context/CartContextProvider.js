@@ -47,12 +47,17 @@ export function useCartContext() {
         setCart(novoCarrinho);
     }
 
+    function efetuarCompra() {
+        setCart([]);
+    }
+    function mensagem() {
+        alert('Compra efetuada com sucesso');
+    }
+
     useEffect(() => {
-        const {novoTotal, novaQuantidade} = cart.reduce((contador, novoItem) => ({
-            novaQuantidade: contador.novaQuantidade + novoItem.quantidade,
-            novoTotal: contador.novoTotal + (novoItem.valor*novoItem.quantidade)
-        }), {novaQuantidade: 0, novoTotal: 0})
-        setQuantidadeCarrinho(novaQuantidade);
+        const {novoTotal} = cart.reduce((contador, Produto) => ({
+            novoTotal: contador.novoTotal + (Produto.valor*Produto.quantidade)
+        }), {novoTotal: 0})
         setValorTotal(novoTotal);
 }, [cart, setQuantidadeCarrinho, setValorTotal])
 
@@ -62,7 +67,8 @@ export function useCartContext() {
         adicionarProduto,
         removerProduto,
         quantidadeCarrinho,
-        setValorTotal,
-        valorTotal
+        valorTotal,
+        efetuarCompra,
+        mensagem
     };
 }

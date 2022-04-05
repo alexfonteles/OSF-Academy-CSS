@@ -11,7 +11,7 @@ function Card({id, nome, descricao, preco, imagem, alte}) {
         <p className='descricao'>{descricao}</p>
        
     <div className='compra'>
-        <p><span>{preco}</span></p>
+        <p><span>R$ {preco}</span></p>
     <div className='button'>
         <button onClick={() => adicionarProduto({nome, imagem, id, preco})}
         >+</button>
