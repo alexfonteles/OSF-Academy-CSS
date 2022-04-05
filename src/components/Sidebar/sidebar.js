@@ -5,8 +5,7 @@ function Sidebar({busca, setBusca}) {
     return <div className='sidebar'>
         <h3>Instrumentos de Corda</h3>
         <ul>
-            <li>Violão <input type="checkbox" value={busca} 
-    onChange={(e) => setBusca(e.target.value)} /></li>
+            <li>Violão</li>
         </ul>
         <h3>Instrumentos de teclas</h3>
         <ul>
