@@ -4,7 +4,7 @@ import React, { useContext, useState, useEffect } from "react";
 const cartContext = React.createContext();
 cartContext.displayName = "Carrinho"
 
-const CartContextProvider = ({children}) => {
+    const CartContextProvider = ({children}) => {
     const [cart, setCart] = useState([]);
     const [quantidadeCarrinho, setQuantidadeCarrinho] = useState(0);
     const [valorTotal, setValorTotal] = useState(0);
@@ -55,11 +55,13 @@ export function useCartContext() {
     }
 
     useEffect(() => {
-        const {novoTotal} = cart.reduce((contador, Produto) => ({
-            novoTotal: contador.novoTotal + (Produto.valor*Produto.quantidade)
-        }), {novoTotal: 0})
+        const {novaQuantidade, novoTotal} = cart.reduce((contador, novoItem) => ({
+            novaQuantidade: contador.novaQuantidade + novoItem.quantidade,
+      novoTotal: contador.novoTotal + (novoItem.preco * novoItem.quantidade)
+        }), { novaQuantidade: 0, novoTotal: 0 });
+        setQuantidadeCarrinho(novaQuantidade);
         setValorTotal(novoTotal);
-}, [cart, setQuantidadeCarrinho, setValorTotal])
+      },[cart, setQuantidadeCarrinho, setValorTotal])
 
     return {
         cart,
