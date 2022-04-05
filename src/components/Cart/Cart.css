@@ -3,6 +3,10 @@
     flex-wrap: wrap;
     color: #BEBDB8;
 }
+.display {
+    color:#BEBDB8
+    
+}
 
 .esvaziar {
     background-color: rgb(234, 53, 53);

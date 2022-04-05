@@ -6,9 +6,9 @@ const CardList = ({produtos}) => {
     return produtos.map((produto) => (
         <Card
             id={produto.id} 
-            name={produto.nome}
-            description={produto.descricao}
-            price={produto.preco}
+            nome={produto.nome}
+            descricao={produto.descricao}
+            preco={produto.preco}
             imagem={produto.imagem}
 
         />

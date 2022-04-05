@@ -1,48 +1,68 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 
-const Context = React.createContext();
-Context.displayName = "Carrinho"
+const cartContext = React.createContext();
+cartContext.displayName = "Carrinho"
 
 const CartContextProvider = ({children}) => {
     const [cart, setCart] = useState([]);
+    const [quantidadeCarrinho, setQuantidadeCarrinho] = useState(0);
+    const [valorTotal, setValorTotal] = useState(0);
 
     return (
-    <Context.Provider value={{cart, setCart}}>{children}</Context.Provider>
+    <cartContext.Provider value={{cart, setCart, quantidadeCarrinho, setQuantidadeCarrinho, valorTotal, setValorTotal}}>{children}</cartContext.Provider>
     );
 };
-
 export default CartContextProvider;
 
 export function useCartContext() {
-    const {cart, setCart} = useContext(Context);
+    const {cart, setCart, quantidadeCarrinho, setQuantidadeCarrinho, valorTotal, setValorTotal} = useContext(cartContext);
+
+    const mudarQuantidade = (id, quantidade) => cart.map(produto => {
+        if (produto.id === id) produto.quantidade += quantidade;
+        return produto;
+      });
+
     function adicionarProduto(novoProduto) {
         const temOProduto = cart.some(produto => produto.id === novoProduto.id);
+        let novoCarrinho = [...cart];
         if(!temOProduto) {
             novoProduto.quantidade = 1;
-            return setCart((prev) => [...prev, novoProduto]);
-        }
-        setCart(prev => prev.map(produto => {
-            if(produto.id === novoProduto.id) produto.quantidade += 1;
-            return produto;
-        }))
-    }
+            novoCarrinho.push(novoProduto);
+            return setCart(novoCarrinho);
+        } 
+        novoCarrinho = mudarQuantidade(novoProduto.id, 1);
+        setCart(novoCarrinho);
+      };
 
     function removerProduto(id) {
         const Produto = cart.find(produto => produto.id === id);
         const ultimo = Produto.quantidade === 1;
+        let novoCarrinho;
         if(ultimo) {
-            return setCart(prev => prev.filter(produto => produto.id !== id));
+            novoCarrinho = cart.filter(produto => produto.id !== id);
+            return setCart(novoCarrinho);
         }
-        setCart(prev => prev.map(produto => {
-            if(produto.id === id) produto.quantidade -= 1;
-            return produto
-        }))
+        novoCarrinho = mudarQuantidade(id, -1);
+        setCart(novoCarrinho);
     }
+
+    useEffect(() => {
+        const {novoTotal, novaQuantidade} = cart.reduce((contador, novoItem) => ({
+            novaQuantidade: contador.novaQuantidade + novoItem.quantidade,
+            novoTotal: contador.novoTotal + (novoItem.valor*novoItem.quantidade)
+        }), {novaQuantidade: 0, novoTotal: 0})
+        setQuantidadeCarrinho(novaQuantidade);
+        setValorTotal(novoTotal);
+}, [cart, setQuantidadeCarrinho, setValorTotal])
+
     return {
         cart,
         setCart,
         adicionarProduto,
-        removerProduto
+        removerProduto,
+        quantidadeCarrinho,
+        setValorTotal,
+        valorTotal
     };
 }
