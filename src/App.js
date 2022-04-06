@@ -12,8 +12,8 @@ import Cart from './components/Cart'
 
 function App() {
   const [produtos] = useState(Dadosdoproduto);
-
   const [busca, setBusca] = useState('');
+
   const produtosFiltrados = produtos.filter((produto) => produto.nome.toLowerCase().includes(busca.toLowerCase()));
 
 
@@ -24,7 +24,7 @@ function App() {
     <Router>
     <Header busca={busca} setBusca={setBusca}/>
     <div className='corpo'>
-    <Sidebar />
+    <Sidebar setBusca={setBusca}/>
     <CartContextProvider>
     <div className='box-card'>
     <Routes>

@@ -6,6 +6,7 @@ cartContext.displayName = "Carrinho"
 
     const CartContextProvider = ({children}) => {
     const [cart, setCart] = useState([]);
+    
     const [quantidadeCarrinho, setQuantidadeCarrinho] = useState(0);
     const [valorTotal, setValorTotal] = useState(0);
 
